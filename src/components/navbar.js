@@ -34,7 +34,7 @@ export default function Navbar({ children }) {
          Home
         </Link>
       </NavbarBrand>
-      <NavbarContent>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link as={NextLink} href="/about">
             About

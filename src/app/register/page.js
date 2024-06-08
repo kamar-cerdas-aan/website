@@ -1,4 +1,4 @@
-export default async function Login() {
+export default function Login() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center align-center gap-16">
         <a href="/" className="text-sky-500 items-left w-96 underline">Back to Home</a>

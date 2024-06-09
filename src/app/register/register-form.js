@@ -47,7 +47,8 @@ export default function RegisterForm() {
         return isValid;
     }
 
-    const handleRegister = () => {
+    const handleRegister = (e) => {
+        e.preventDefault()
         const deviceIDValid = validateDeviceID();
         const passwordValid = validatePassword();
         const rePasswordValid = validateRePassword();
@@ -75,7 +76,8 @@ export default function RegisterForm() {
             <h1 className="text-4xl font-bold text-center">
                 Create New Account
             </h1>
-            <div className="flex flex-col items-left gap-4 w-80">
+            <div className="flex flex-col items-center gap-4 w-80">
+                <form id="register" className="flex flex-col items-center" onSubmit={handleRegister}>
                 <input type="text" placeholder="Device ID" className="p-2 border-2 border-sky-600 rounded-lg"
                     value={deviceID} onChange={(e) => setDeviceID(e.target.value)} />
                 <p className="text-red-500">{deviceIDErrorMessage}</p>
@@ -85,14 +87,14 @@ export default function RegisterForm() {
                 <input type="password" placeholder="Re-enter Your Password" className="p-2 border-2 border-sky-600 rounded-lg"
                     value={rePassword} onChange={(e) => setRePassword(e.target.value)} />
                 <p className="text-red-500">{rePasswordErrorMessage}</p>
+                </form>
             </div>
-            <button className="bg-sky-500 py-2 w-48 rounded-lg text-white font-bold"
-                onClick={handleRegister}>
+            <button type="submit" form="register" className="bg-sky-500 py-2 w-48 rounded-lg text-white font-bold">
                 Register
             </button>
             <div className="flex flex-col items-center gap-2">
                 <p>Already have an account?</p>
-                <a href="/login" className="text-sky-500 font-bold underline">Try logging in instead</a>
+                <a href="login" className="text-sky-500 font-bold underline">Try logging in instead</a>
             </div>
         </main>
     );

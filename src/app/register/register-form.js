@@ -72,7 +72,6 @@ export default function RegisterForm() {
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-center align-center gap-16">
-            <a href="/" className="text-sky-500 items-left w-96 underline">Back to Home</a>
             <h1 className="text-4xl font-bold text-center">
                 Create New Account
             </h1>

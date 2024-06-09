@@ -36,18 +36,8 @@ export default function Navbar({ children }) {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link as={NextLink} href="/about">
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
           <Link as={NextLink} href="/login">
-            Login
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link as={NextLink} href="/register">
-            Register
+            Log out
           </Link>
         </NavbarItem>
       </NavbarContent>

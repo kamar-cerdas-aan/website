@@ -23,3 +23,14 @@ export async function login(deviceID, password) {
 
     return data;
 }
+
+// export default function handlerSession(req, res) {
+//     const sessionData = req.body;
+//     const cookie = serialize('session', JSON.stringify(sessionData), {
+//         sameSite: 'strict',
+//         path: '/',
+//         maxAge: 3600,
+//     });
+//     res.setHeader('Set-Cookie', cookie);
+//     res.status(200).json(sessionData);
+// }

@@ -98,7 +98,6 @@ export default function LoginForm(isRegister = false) {
 
 	return (
 		<>
-			<a href="/" className="text-sky-500 items-left w-96 underline">Back to Home</a>
 			<h1 className="text-4xl font-bold text-center">
 				Welcome back!
 			</h1>

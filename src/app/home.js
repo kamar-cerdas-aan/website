@@ -4,10 +4,12 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import LogCard from "@/components/card";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { getProfile } from "./data";
 
 export default function Home() {
+  const router = useRouter();
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {

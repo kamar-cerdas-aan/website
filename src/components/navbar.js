@@ -41,11 +41,6 @@ export default function Navbar({ children }) {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/contact">
-            Contact
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
           <Link as={NextLink} href="/login">
             Login
           </Link>

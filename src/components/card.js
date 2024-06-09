@@ -12,7 +12,7 @@ export default function LogCard({log, time, action}) {
         <div className="flex flex-row justify-between">
             <div className="flex flex-col text-sm w-48">
                 <p className="font-bold">At</p>
-                <p>{time}</p>
+                <p>{(new Date(time)).toLocaleString()}</p>
             </div>
             <div className="flex flex-col text-sm w-48">
                 <p className="font-bold">Lamp Action</p>
